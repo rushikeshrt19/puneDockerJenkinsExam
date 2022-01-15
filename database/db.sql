@@ -1,0 +1,1 @@
+CREATE TABLE movie(movie_id primary key auto_increment,movie_title VARCHAR(255),movie_release_date VARCHAR,movie_time INTEGER,director_name VARCHAR(255));
