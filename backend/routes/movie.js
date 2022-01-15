@@ -16,7 +16,7 @@ router.get("/", (request, response) => {
 router.post("/add", (request, response) => {
     const {movie_title,movie_release_date ,movie_time,director_name}=request.body
     const connection = database.openConnection()
-    const statement = ` INSERT INTO movie VALUES('${movie_title}','${movie_release_date}','${movie_time}','${director_name}')`
+    const statement = ` INSERT INTO movie VALUES(default,'${movie_title}','${movie_release_date}','${movie_time}','${director_name}')`
     
     connection.query(statement, (error, result) => {
         response.send(utils.checkresult(error, result))
